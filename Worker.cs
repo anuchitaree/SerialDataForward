@@ -22,6 +22,12 @@ namespace SerialDataForward
         {
             try
             {
+                //_inputPort?.Dispose();
+                //foreach (var port in _outputPorts)
+                //    port.Dispose();
+
+                //base.Dispose();
+
                 _inputPort = CreatePort(_settings.Input);
                 _inputPort.DataReceived += OnDataReceived;
                 _inputPort.Open();
